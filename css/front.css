@@ -1,0 +1,25 @@
+
+#sidebar {
+	padding: 10px;
+	top: 67px;
+	position: relative;
+	width: 100px;
+	float: left;
+	background-color: white;
+	border: 1px solid black;
+	margin-left: 10px;
+}
+
+p.sidebar_title {
+	padding: 5px;
+	background-color: #90bbdb;
+	font-weight: bold;
+	color: white;
+}
+
+#topbar {
+	float: right;
+	background-color: #cde;
+	padding: 5px;
+	border: 1px solid;
+}

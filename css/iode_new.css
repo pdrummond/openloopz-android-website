@@ -1,0 +1,43 @@
+html, body, ol, 
+form, fieldset, a {
+	margin: 0;
+	padding: 0;
+	border: 0;
+} 
+
+#header ul, #header li, #header p,
+#main_navbar ul, #main_navbar li, #main_navbar p,
+#bin_navbar ul, #bin_navbar li, #bin_navbar p
+{ 
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+img {
+	border: none;
+}
+#container {
+	margin: 200px;
+}
+
+#logo {
+	position:absolute;
+	top: 221px;
+	left: 200px;
+	width: 400px;
+	height: 260px;
+	background-image: url("../images/iode-logo-final-lowRes.png");
+	/*background-image: url("../images/iode_big_logo.jpg");
+	background-repeat: no-repeat;
+	width: 356px;
+	height: 282px;*/
+}
+
+#content {
+	position: absolute;
+	top: 160px;
+	left: 420px;
+	width: 600px;
+}
+

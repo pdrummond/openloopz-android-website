@@ -1,0 +1,96 @@
+html {
+    background: url("/images/bg.png") repeat scroll 0 0 #CCCCCC;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #000;
+    font-family: helvetica, arial,sans-serif;
+    font-size: 16px;
+    background: url("/images/bkg.png") no-repeat scroll 50% 0 transparent;
+    height: 100%;
+}
+
+#container {
+    position:relative;
+    width: 800px;
+    top: 200px;
+    margin: 0px auto;
+    height: 400px;
+}
+
+#content {
+    text-align: center;
+}
+
+h1 {
+    border-top: 8px solid #222222;
+//    border-bottom: 8px solid #222222;
+    color: #222222;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 70px;
+    margin: 20px 0 0;
+    padding: 2px 0 2px;
+}
+
+h2 {
+    color: #999999;
+    font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2",Georgia,Times,serif;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: normal;
+    text-decoration: none;
+    margin: 0;
+}
+
+h4 {
+    text-align: center;
+    font-size: 10px;
+    color: #ab0e0e;
+}
+
+#logo {
+    margin: 0px auto;
+    background: url("/images/logo-xlarge.png");
+    background-repeat:no-repeat;
+    width: 715px;
+    height: 110px;
+}
+
+#email {
+    margin-top: 20px;
+}
+
+#email #form {
+    width: 500px;
+    height: 50px;
+    margin: 0px auto;
+}
+
+#emailInput {
+    width: 80%;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E3E3E3;
+    color: #7F7F7F;
+    padding: 12px;
+}
+
+#submit {
+    width: 50px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    background: none repeat scroll 0 0 #AB0E0E;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 5px;
+    padding: 12px;
+}
+
+#footer {
+    width:100%;
+}

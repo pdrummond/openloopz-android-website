@@ -1,0 +1,2184 @@
+
+html {
+    width: 900px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background: white;
+    color: #333333;
+    font-size:14px;
+    font-family: Helvetica;
+//    border-left: 1px solid lightgray;
+//    border-right: 1px solid lightgray;
+}
+
+body {
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+a:link, a:visited {
+    color: #3B5998;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+#pageContainer {
+    
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#leftSidebar {
+    float:left;
+    width:145px;
+}
+
+#mainWrapper {
+    border: 1px solid #d1d1d1;
+}
+
+#mainContentWrapper {
+    position:relative;
+    margin-left:140px;
+    min-height:800px;
+    border-left: 1px solid #d1d1d1;
+}
+
+#mainContent {
+}
+
+#headerBar {
+    position:relative;
+    height:25px;
+    margin-bottom: 20px
+}
+
+#logo {
+    position:absolute;
+    left: 0px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#logo img {
+    border: none;
+}
+
+#topArea {
+    margin:0;
+    padding:10px;
+    border-bottom: 1px solid lightgray;
+}
+
+#topArea h1 {
+    font-size: 1.5em;
+//    color: #BBBBBB;
+    padding-left: 10px;
+}
+
+input {
+    border: 1px solid gray;
+}
+
+.lineEditWidget {
+    color: gray;
+    padding: 5px;
+}
+
+.lineEditWidget textarea{
+    height: 13px; 
+    resize:none;
+}
+
+#buttonBar {
+    margin:0;
+    padding:0;
+    height:35px;
+    border-bottom: 1px solid lightgray;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='white', endColorstr='#EEEEEE'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#EEEEEE)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  white,  #EEEEEE); /* for firefox 3.6+ */ 
+}
+
+#buttonBar ul {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+
+#buttonBar ul li {
+    float:left;
+    border-radius:4px;
+    margin: 5px;
+    padding-left: 5px;
+    list-style:none;
+    font-size:0.9em;
+}
+
+#buttonBar ul li a {
+    display: block;
+    color:gray;
+    border-radius:4px;
+    margin: 5px;
+}
+
+#buttonBar .selected, #buttonBar li:hover {
+    display:block;
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+#buttonBar li.selected a, #buttonBar li a:hover{
+    text-decoration:none;
+    border-radius:4px;
+    margin: 5px;
+    color:black;
+}
+
+#buttonBar li.selected a {
+    font-weight:bold;
+}
+
+
+#shortcutBar {
+    margin:0;
+    padding:0;
+}
+
+#shortcutBar ul {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    width:100%;
+}
+
+#shortcutBar ul li {
+  margin: 5px;
+  padding: 5px;
+  list-style:none;
+  color:black;
+}
+
+#shortcutBar .selected {
+    display:block;
+    background-color: white;
+    color:white;
+    cursor: pointer;
+    background-color: #F5F5F5;
+}
+
+#shortcutBar li:hover {
+    background-color:#F5F5F5;
+}
+
+#shortcutBar li.selected a, #shortcutBar li a:hover{
+    text-decoration:none;
+}
+
+#shortcutMenu {
+    display:none;
+    position:relative;
+}
+
+#shortcutMenu ul {
+    display:none;
+    position:absolute;    
+    top:15px;
+    left:95px;
+    width:60px;
+    margin:0;
+    padding:0;
+    border: 1px solid gray;
+    z-index: 1;
+    background: white;
+    font-size:0.8em;
+}
+
+#shortcutMenu li {
+    list-style-type:none;
+    z-index:100;
+    padding: 10px;
+    cursor:pointer;
+}
+
+#shortcutMenuButton {
+    background: lightgray;
+    color:white;
+    width:15px;
+    height:15px;
+    font-size: 0.8em;
+    margin-right:10px;
+    float:right;
+    text-align:center;
+    cursor:pointer;
+}
+
+#shortcutMenuButton:hover {
+    background:#99CCFF;
+    cursor:pointer;
+}
+
+/*
+#shortcutMenu li:hover {
+    background: #F0F0F0;
+    cursor:pointer;
+    
+}*/
+
+.actionsBox {
+    position:relative;
+    display:block;
+}
+
+
+.showMore {
+    display:relative;
+    right:0px;
+}
+
+.actionList {
+    position:relative;
+    padding:0px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-bottom:50px;
+    top:15px;
+}
+
+.actionList .secondrow td {
+    color:gray;
+    font-size: 0.9em;
+}
+
+.actionList .secondrow td > a {
+    font-size: 0.9em;
+}
+
+.actionList  li {
+    display: block;
+    position: relative;
+}
+
+.actionNum {
+    font-size:0.7em;
+    color: lightgray;
+    vertical-align:top;
+}
+
+.actionNum:hover {
+    color: orange;
+    font-weight: bold;
+}
+
+.actionItem {
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    margin-top:5px;
+    cursor:pointer;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='white', endColorstr='#EEEEEE'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#EEEEEE)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  white,  #EEEEEE); /* for firefox 3.6+ */ 
+    box-shadow: 1px 1px 2px lightgray;    
+}
+
+.actionIsActiveNew {
+    background: #E9F1F4;
+}
+
+.actionItem.complete:hover {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='lightgray', endColorstr='#FFFFCC'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(lightgray), to(#FFFFCC)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  lightgray,  #FFFFCC); /* for firefox 3.6+ */ 
+}
+
+
+.actionItem:hover {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='lightgray', endColorstr='#EEEEEE'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(lightgray), to(#EEEEEE)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  lightgray,  #EEEEEE); /* for firefox 3.6+ */ 
+}
+
+.actionTitle {
+    color:black !important;
+    font-size: 1.1em;
+}
+
+.actionDesc {
+    margin-top:5px;
+    font-size: 0.8em;
+    color:gray;
+}
+
+.actionProfileImage {
+}
+
+.dropdown {
+    position:relative;
+    border-radius: 5px;
+    background: #EEEEEE;
+    padding:5px;
+    padding-left:10px;
+}
+
+.dropdownTextarea {
+    cursor:pointer;
+}
+
+.dropdownContent {
+    display:none;
+    background: #EEEEEE;
+    border: 1px solid gray;
+    border-radius: 2px;
+    z-index: 5
+
+}
+
+#filterDropdown {
+    position:absolute;
+    top:-70px;
+    right:30px;
+    width:60px;
+    height: 15px;
+}
+
+#filterDropdown .dropdownContent {
+    position:absolute;
+    right:1px;
+}
+
+#optionsDropdown {
+    position:absolute;
+    top:-70px;
+    right:100px;
+    width:80px;
+    height: 15px;
+}
+
+#optionsDropdown .dropdownContent {
+    position:absolute;
+    right:1px;
+}
+
+
+#whenDropdown {
+    width: 60px;
+}
+
+#whenDropdown .dropdown {
+    height: 10px;
+    background: #6699CC;
+    color: white;
+    text-weight: bold;
+}
+
+#whenDropdown .dropdownArrow {
+    font-size: 8px;
+}
+
+#whenDropdown .dropdownTextarea {
+    font-size: 10px;
+}
+
+.dropdownMenu {
+    padding:0;
+    margin:0;
+    list-style-type:none;
+}
+
+.dropdownMenu li, #whenDropdown li:hover {
+    height: 24px;
+    width: 145px;
+    padding:5px;
+    cursor:pointer;
+}
+
+.dropdownMenu li input {
+    width: 142px;
+}
+
+.dropdownMenu  li:hover {
+    background:white;
+    border-radius: 5px;
+}
+
+#whenDropdown .dropdownContent {
+    width: 150px;
+    color: black;
+}
+
+.dropdownArrow {
+    position: absolute;
+    top:5px;
+    right:5px;
+}
+
+.filterBox {
+    height: 150px;
+}
+
+.filterBox select, .filterBox input {
+    width: 150px;
+}
+
+#filterTable #buttonCol {
+    position:relative;
+}
+
+#filterTable #buttonCol .buttonGroup {
+    position:absolute;
+    right:10px;
+}
+
+#screen {
+    display:none;
+    margin:0;
+    padding:0;
+    left:0;
+    position:fixed;
+    width: 100%;
+    height:100%;
+    background-repeat: repeat;
+    background: black;
+    z-index: 100;
+    opacity: 0.3;
+}
+
+
+.buttonGroup ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+
+}
+
+.buttonGroup li {
+    float:left;
+    background: lightgray;
+    color: gray;
+    font-weight: bold;
+    border-radius: 4px;
+    text-align: center;
+    padding: 5px;
+    font-size: 0.8em;
+        width: 50px;
+        margin-left: 10px;
+}
+
+.buttonGroup li a {
+    display: block
+
+}
+
+.buttonGroup li:hover {
+    background: gray;
+    color:white;
+    cursor:pointer;
+}
+
+.buttonGroup li a:hover {
+
+    text-decoration:none;
+}
+
+#listComboWidget {
+    width: 200px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.actionQuickAddWidget input {
+    width:500px;
+}
+
+.detailsBoxTitle {
+    border:none !important;
+    font-size: 30px !important;
+    margin-bottom:10px
+    color: gray;
+}
+
+.detailsBoxDesc {
+    width: 750px;
+    height: 100px;
+    border: 1px solid lightgray;
+}
+
+.basicEditBox {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid lightgray;
+    width:100%;
+}
+
+.comingSoon {
+    padding: 15px;
+    background: #FFCC00;
+    text-align: center;
+    width: 200px;
+    margin-left:auto;
+    margin-right:auto;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    border-radius: 4px;
+}
+
+#actionShowMore {
+    padding:20px;
+    float:right;
+}
+
+
+.loginView input {
+    border: 1px solid #D8DEE2;
+    margin: 0.2em 0 1em;
+    padding: 5px;
+    width: 300px;
+}
+
+.loginView img {
+    margin-left:60px;
+}
+
+.loginView h3, .loginView p {
+    text-align:center;
+}
+
+.loginView {
+    border-color: #E9F1F4 #D8DEE2 #D8DEE2;
+    border-radius: 0 0 3px 3px;
+    border-style: solid;
+    border-width: 1px 1px 2px;
+    margin-left:250px;
+    margin-top: 200px;
+    padding: 20px;
+    width:310px;
+    height: 260px;
+    background: #E9F1F4;
+    border-radius: 4px;
+}
+
+.registerView input {
+    border: 1px solid #D8DEE2;
+    margin: 0.2em 0 1em;
+    padding: 5px;
+    width: 300px;
+}
+
+.registerView img {
+    margin-left:60px;
+}
+
+.registerView h3, .registerView p {
+    text-align:center;
+}
+
+.registerView {
+    border-color: #E9F1F4 #D8DEE2 #D8DEE2;
+    border-radius: 0 0 3px 3px;
+    border-style: solid;
+    border-width: 1px 1px 2px;
+    margin-left:250px;
+    margin-top: 100px;
+    padding: 20px;
+    width:310px;
+    height: 460px;
+    background: #E9F1F4;
+    border-radius: 4px;
+}
+
+/*
+#userProfileImageBox {
+    position:absolute;
+    top:5px;
+    right:60px;
+}*/
+
+/*#logout {
+    position:absolute;
+    top: 15px;
+    right: 10px;
+}*/
+#profile {
+    position:absolute;
+    top: 15px;
+    right: 70px;
+}
+
+
+#errorBar  {
+    display:none;
+    width: 100%;
+}
+
+#errorBar p {
+    margin:0;
+    padding:10px;
+    background: yellow;
+    border: 1px solid orange;
+    text-align: center;
+    font-weight: bold;
+}
+
+.loadingIcon {
+    display:none;
+    position:absolute;
+    background: url("/images/loading.gif") no-repeat;
+    width:16px;
+    height:16px;
+}
+
+.busyIcon {
+    background: url("/images/loading.gif") no-repeat;
+    width:16px;
+    height:16px;
+}
+
+#pageLoadingAnim {
+    position:absolute;
+    top:90px;
+    left: 350px;
+    background: url("/images/loading.gif") no-repeat;
+    width:16px;
+    height:16px;
+}
+
+.relative {
+    position: relative;
+}
+
+.userSearchWidget input {
+    width: 450px;
+}
+
+.basicList {
+    margin:0;
+    padding:0;
+}
+
+
+.basicList > li {
+    display: block;
+    padding: 10px;
+    position: relative;
+    margin:10px;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='white', endColorstr='#EEEEEE'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#EEEEEE)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  white,  #EEEEEE); /* for firefox 3.6+ */ 
+    box-shadow: 1px 1px 2px lightgray;    
+}
+
+.basicList > .ui-draggable-dragging {
+    border:none;
+    background: #eeeeee;
+    border-radius: 4px;
+}
+
+.basicList > .ui-draggable-dragging > .basicButton  {
+    display:none;
+}
+
+.basicList > a {
+    padding: 5px;
+    font-size: 1.0em;
+}
+
+.basicList button {
+    float:right;
+}
+
+.basicList .basicButton {
+    float:right;
+    margin-top: -3px;
+    margin-right:10px;
+}
+
+.basicList .basicButtonDisabled {
+    float:right;
+    margin-right:10px;
+}
+
+
+
+.userListView .loadingIcon {
+    right: 125px;
+    top:13px;
+}
+
+.basicList .title {
+    cursor:pointer;
+    margin-top: 10px;
+
+}
+
+.basicList .subTitle {
+    font-style: italic;
+    font-size: 16px;
+    color: red
+}
+
+#notificationDropdown > .dropdown {
+    position:absolute;
+    top:10px;
+    left: 220px;
+    max-height: 800px;
+    width: 20px;
+}
+
+#notificationDropdown .dropdownContent {
+    border: none;
+    margin:0;
+    padding:10px;
+    width: 390px;
+}
+
+.notificationMenu {
+    margin:0;
+    padding:0;
+}
+
+.notificationItem, .notificationItem:hover {
+    border: 1px solid gray;
+    padding:5;
+    margin-top:10px;
+    list-style-type:none;
+    height: 50px;
+    width: 380px;
+    padding:5px;
+    cursor:pointer;
+    color:black;
+    background:white;
+}
+
+
+.notificationItem .title {
+    margin-top: -2px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.notificationItem .desc {
+    margin-top: -2px;
+    font-size: 0.8em;
+}
+
+.notificationItem a {
+    text-decoration: none;
+    color:black !important;
+
+}
+
+.notificationItem .time {
+    font-size: 0.8em;
+}
+
+
+
+.notificationItem:hover {
+    background:lightgray;
+}
+
+#notificationCount {
+    display:none;
+    position:absolute;
+    top: 2px;
+    left: 242px;
+    background-color: red;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    width: 20px;
+    height:20px;
+    z-index:99;
+}
+
+#notificationCount p {
+    margin-top:4px;
+    color: white;
+    font-size: 0.8em;
+    font-weight:bold;
+    text-align:center;
+}
+
+.unreadNotification {
+    background: #D8DEE2;
+}
+
+#sidebarCounters {
+    float:right;
+}
+
+#sidebarCounters ul li { 
+    float:left;
+    padding:0;
+    margin:0;
+    list-style-type:none;
+    margin-right:2px;
+}
+
+#newActiveActionCount {
+    display:none;
+    background-color: red;
+    width: 15px;
+    height:15px;
+    z-index:99;
+}
+
+#newActiveActionCount p {
+    margin-top:4px;
+    color: white;
+    font-size: 0.6em;
+    font-weight:bold;
+    text-align:center;
+}
+
+.sidebarItemCount {
+    background-color: lightgray;
+    margin-right:30px;
+    width: 15px;
+    height:15px;
+    z-index:99;
+}
+
+.sidebarItemCount p {
+    margin-top:4px;
+    color: gray;
+    font-size: 0.6em;
+    font-weight:bold;
+    text-align:center;
+}
+
+
+.basicBox {
+    border-color: #E9F1F4 #D8DEE2 #D8DEE2;
+    border-radius: 0 0 3px 3px;
+    border-style: solid;
+    border-width: 1px 1px 2px;
+    background: #E9F1F4;
+    border-radius: 4px;
+}
+
+.warningBox {
+    border-color: #E9F1F4 #D8DEE2 #D8DEE2;
+    border-radius: 0 0 3px 3px;
+    border-style: solid;
+    border-width: 1px 1px 2px;
+    background: #FFCC66;
+    border-radius: 4px;
+}
+
+#accessDeniedWrapper {
+    position:relative;
+    width: 100%;
+    height: 100%;
+}
+
+#accessDenied {
+    position:absolute;
+    top:150px;
+    left:350px;
+    background: #FFCC66;
+    margin: auto auto;
+    padding: 10px;
+    width:120px;
+    height: 40px;
+
+}
+#accessDenied p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#nowButton {
+    padding: 1px;
+    padding-top: 2px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    width: 30px;
+    color: gray;
+    font-size: 11px;
+    font-weight: normal;
+    text-align: center;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='lightgray', endColorstr='#EEEEEE'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(lightgray), to(#EEEEEE)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  lightgray,  #EEEEEE); /* for firefox 3.6+ */ 
+}
+
+#nowButton.selected {
+    font-weight: bold;
+    color: white;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6699CC', endColorstr='#427AB3'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#6699CC), to(#427AB3)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #6699CC,  #427AB3); /* for firefox 3.6+ */ 
+
+}
+
+
+.newsFeed {
+    margin:0;
+    padding:0;
+    margin-top: 20px;
+}
+
+.newsFeed > li {
+    border-bottom: 1px solid lightgray;
+    background:white;
+    display: block;
+    position: relative;
+    margin:10px;
+}
+
+.newsFeed .image {
+   padding: 10px;
+}
+
+.newsFeed .title {
+    margin-top: 2px;
+    margin-bottom:5px;
+    font-size:14px;
+    font-weight: bold;
+}
+
+.newsFeed .desc {
+    font-size: 12px;
+}
+
+.newsFeed .time {
+    color:gray;
+    font-size: 10px;
+    margin-top:10px;
+}
+
+
+.newsFeed button {
+    float:right;
+}
+
+.activityFeed {
+    margin:0;
+    padding:0;
+    margin-top: 20px;
+}
+
+.activityFeed > li {
+    border-bottom: 1px solid lightgray;
+    background:white;
+    display: block;
+    position: relative;
+    margin:10px;
+}
+
+.activityFeed .image {
+   padding-right: 10px;
+}
+
+.activityFeed .title {
+    margin-top: 2px;
+    font-weight: bold;
+    margin-bottom:5px;
+}
+
+.activityFeed .desc {
+    font-size: 12px;
+}
+
+.activityFeed .time {
+    color:gray;
+    font-size: 10px;
+}
+
+
+.actionQuickAddWidget textarea {
+    width: 500px;
+}
+
+.statusUpdateWidget {
+    width: 80%;
+}
+
+.statusUpdateWidget .lineEditWidget {
+    width:100%;
+}
+
+.newsFeed .activity {
+    font-weight: bold;
+    margin-left: 20px;
+    text-transform: uppercase;
+    color: gray;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.activitySection {
+    margin:10px;
+    border-bottom: 1px solid lightgray;
+    padding-bottom:10px
+}
+
+#activityHeader, .activityNewsItem {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.activitySection ul {
+    color: gray;
+
+}
+
+.activitySection li {
+    margin-left:0;
+    margin-top: 5px;
+    display: block;
+    position: relative;
+    padding:5px;
+}
+
+.activitySection .desc {
+    font-size: 0.9em;
+}
+
+.contextItem .title {
+    cursor: pointer;
+
+}
+
+.placeItem .title {
+    cursor: pointer;
+
+}
+
+#mapCanvas {
+    width:760px;
+    height:300px;
+}
+
+.placeTickBox {
+     float:right;
+}
+
+
+.userSummaryView input {
+    border: 1px solid #D8DEE2;
+    margin: 0.2em 0 1em;
+    padding: 5px;
+    width: 300px;
+}
+
+.userSummaryView select {
+    width:300px;
+}
+
+.userSummaryView img {
+    vertical-align: middle;
+}
+
+.userSummaryView #profileName {
+    padding:20px;
+    font-weight:bold;
+    font-size: 1.5em;
+}
+
+.profileDetails {
+    margin-top:10px;
+    width:100%;
+}
+
+.profileDetails tr {
+    height:30px;
+}
+
+.profileDetails .label {
+    color:gray;
+    font-weight:bold;
+    width:300px;
+}
+
+.userSummaryView {
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 60px;
+    border-color: #E9F1F4 #D8DEE2 #D8DEE2;
+    border-radius: 0 0 3px 3px;
+    border-style: solid;
+    border-width: 1px 1px 2px;
+    padding: 50px;
+    border-radius: 4px;
+}
+
+.userSummaryViewHeader {
+//    margin-left: 60px;
+}
+
+.userSummaryViewImage {
+    margin-left:200px;
+    padding: 10px;
+}
+
+.projectSummaryView #projectName {
+    padding:20px;
+    font-weight:bold;
+    font-size: 1.5em;
+}
+
+.projectSummaryView #projectImage img {
+    vertical-align: middle;
+}
+
+.projectSummaryView #projectTitle {
+    font-size: 1.5em;
+    margin-left: 10px;
+}
+
+
+.projectDetails {
+    margin-top:10px;
+    width:100%;
+}
+
+.projectDetails tr {
+    height:30px;
+}
+
+.projectDetails .label {
+    color:gray;
+    font-weight:bold;
+    width:300px;
+}
+
+.projectSummaryView {
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 30px;
+    margin-bottom: 60px;
+    border-color: #E9F1F4 #D8DEE2 #D8DEE2;
+    border-radius: 0 0 3px 3px;
+    border-style: solid;
+    border-width: 1px 1px 2px;
+    padding: 10px;
+    background: #E9F1F4;
+    border-radius: 4px;
+}
+
+
+#userProfileView {
+    width: 95%;
+}
+
+
+.filterView {
+    position:relative;
+}
+
+.boxTitle {
+    display:block;
+    margin:0;
+    background:white;
+    width:100%;
+    padding-top:5px;
+    padding-bottom:5px;
+    border-bottom: 1px solid lightgray;
+    text-align: center;
+    font-weight: bold;
+    color:gray;
+}
+
+#filterSentence td {
+    padding:5px;
+}
+
+#filterSentenceCloseButton {
+    float:right;
+    font-size: 0.7em;
+    margin-right:5px;
+    width:10px;
+    height:5px;
+}
+
+#filterSentence #saveButton {
+    float:right;
+}
+
+#filterSentence {
+    display:none;
+    font-size:0.9em;
+    background:#f5f5f5;
+    position:absolute;
+    top:-35px;
+    left:-250px;
+    width:250px;
+    border: 1px solid lightgray;
+    box-shadow: 3px 3px 4px gray;
+    z-index:100;
+    cursor:move
+}
+
+#filterSentence select, #filterSentence input {
+    max-width: 200px;
+}
+
+#actionOptionsBar {
+    float:right;
+    display:none;
+    margin-top: 5px;
+    margin-right:30px;
+    height:20px;
+}
+
+.standardButtonBar {
+    margin:0;
+    padding:0;
+}
+
+.standardButtonBar ul {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+
+.standardButtonBar ul li {
+  float:left;
+  margin: 5px;
+  padding: 3px;
+  text-align:center;
+  list-style:none;
+}
+
+.standardButtonBar ul li a {
+    display: block;
+    color:black;
+}
+
+.standardButtonBar .selected {
+    display:block;
+    cursor: pointer;
+}
+
+.standardButtonBar li:hover {
+    display:block;
+    cursor: pointer;
+}
+
+.standardButtonBar li.selected a, .standardButtonBar li a:hover{
+    text-decoration:none;
+}
+
+#actionTopArea {
+    position:relative;
+    margin-left:15px;
+}
+
+
+.standardLabel {
+    font-size: 0.8em;
+    border-radius:4px;
+    color:white;
+    padding:2px;
+}
+
+.activeStatusLabel { 
+    background: lightblue;
+    color:white;
+}
+
+.projectLabel {
+    background-color: #CCCCCC;
+}
+
+.dueTodayLabel {
+    background-color: #EEEEEE;
+    color:gray;
+}
+
+
+.overdueLabel {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#BF2C2C', endColorstr='red'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#BF2C2C), to(red)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #BF2C2C,  red); /* for firefox 3.6+ */ 
+
+}
+
+.contextLabel {
+    border-radius:4px;
+    border: 1px solid orange;
+    background-color: #E9F1F4;
+    color:gray;
+}
+
+#footer {
+    text-align: right;
+    padding: 5px;
+    clear:both;
+    font-size: 9px;
+    color: lightgray;
+    border-top: 1px solid #d1d1d1;
+
+}
+
+.shortcutListView {
+    margin:0;
+    padding-left:5px;
+    width:180px;
+    min-height:20px;
+    margin: 5px;
+
+
+}
+
+.shortcutListView button {
+    font-size: 10px;
+    margin:0;
+    padding:0;
+}
+
+
+.shortcutListView > li {
+    padding: 5px;
+    list-style-type: none;
+    width: 120px;
+}
+
+.shortcutListView a {
+    font-size: 0.9em;
+}
+
+.shortcutHeader {
+    font-variant: small-caps;
+}
+ 
+#shortcutButtonBar {
+    display:none;
+}
+
+.popupWidget .selectedItem { 
+    color:#3B5998;
+    cursor:pointer;
+}
+
+.popupWidget .selectedItem.disabled { 
+    color:black;
+    cursor:auto;
+}
+
+.popupList {
+    display:none;
+    position:absolute;    
+    margin:0;
+    padding:0;
+    border: 1px solid gray;
+    padding: 10px;
+    z-index: 1;
+    background: white;
+}
+
+.popupList li {
+    list-style-type:none;
+    z-index:100;
+    padding: 10px;
+}
+
+.popupList li:hover {
+    background: #F0F0F0;
+    cursor:pointer;
+    
+}
+
+.shadow {
+    box-shadow: 3px 3px 4px gray;
+}
+
+.detailsHeader {
+    width: 900px;
+    position:relative;
+}
+
+#detailsPane, #contextDetailsPane {
+    width:100%;
+    margin:0;
+    padding:0;
+}
+
+#detailsNumHeader {
+}
+
+#detailsTitleHeader {
+    margin-left:10px;
+    width:100%;
+}
+
+#detailsHeaderTopBar {
+    margin:0;
+    padding:0;
+    width:100%;
+    height:40px;
+    font-size:0.9em;
+    border-bottom: 1px solid lightgray;
+}
+
+#detailsHeaderBottomBar {
+    margin:0;
+    padding:0;
+    width:100%;
+    font-size:0.9em;
+    border-top: 1px solid lightgray;
+    background: #f5f5f5;
+    border-bottom: 1px solid lightgray;
+}
+
+#detailsHeaderBottomBar table {
+    margin-left:10px;
+}
+
+#detailsHeaderBottomBar tr {
+    height: 30px;
+}
+
+#detailsHeaderBottomBar td.label {
+    font-weight:bold;
+    color: gray;
+    width: 100px;
+}
+
+.horizList > ul {
+    margin:0;
+    padding:0;
+}
+
+.horizList > ul > li {
+    float:left;
+    list-style-type:none;
+    padding: 10px;
+}
+
+#detailsPane .buttonGroup {
+    float:right;
+    height:30px;
+    padding:10px;
+}
+
+#detailsPane tr {
+}
+
+#detailsPane select, #detailsPane input {
+//    width: 550px;
+}
+
+#detailsTitle {
+    font-size: 1.5em;
+    margin-top:10px;
+    margin-left:10px;
+    padding: 10px;
+    width:600px;
+}
+
+#detailsNum {
+    margin-left:10px;
+    color: gray;
+    margin-top:15px;
+    font-size: 1.2em;
+    float:left;
+    height:60px;
+}
+
+.detailsView .datepicker {
+    width: 80px;
+}
+
+.detailsView .timepicker {
+    margin-left:10px;
+    width: 40px;
+}
+
+#detailsTitleEditButton {
+    display:none;
+    float:right;
+    position:relative;
+    top:10px;
+    right:30px;
+}
+
+#detailsDescHeader {
+    position:relative;
+    width:100%;
+    border-bottom:1px solid lightgray;
+}
+
+#detailsDesc {
+    width:550px;
+    padding:10px;
+    font-size:1em;
+}
+
+#detailsDescEditButton {
+    display:none;
+    float:right;
+    position:relative;
+    top:10px;
+    right:10px;
+
+}
+
+#detailsTagHeader {
+    width:100%;
+    height:30px;
+    border-bottom:1px solid lightgray;
+
+}
+
+#detailsTag {
+    float:left;
+    font-size: 0.9em;
+    padding:10px;
+    width:200px;
+    font-style:italic;
+}
+
+#detailsTagEditButton {
+    display:none;
+    float:right;
+    position:relative;
+    top:5px;
+    right:15px;
+
+}
+
+.basicButtonList ul {
+    margin:0;
+    padding:0;
+}
+
+.basicButtonList li {
+    list-style-type:none;
+    float:left;
+    margin-right:10px;
+}
+
+.basicButton {
+    border-radius: 2px;
+    padding: 5px;
+    font-size: 0.9em;
+    background: #f5f5f5;
+    text-align: center;
+    height: 12px;
+    box-shadow: 1px 1px 2px gray;
+    cursor:pointer
+}
+
+.basicButtonDisabled {
+    border-radius: 2px;
+    font-size: 0.9em;
+    padding: 5px;
+    background: #eeeeee;
+color: gray;
+    text-align: center;
+    height: 12px;
+    box-shadow: 1px 1px 2px gray;
+}
+
+
+.redButton {
+    background: #C51233;
+    color: white;
+}
+
+.basicButton:hover {
+    background: #99CCFF
+}
+
+#headerTopBarLeft {
+    margin-left:10px;
+    float:left;
+    width:300px;
+    height:10px;
+}
+
+#headerTopBarRight {
+    margin-right:10px;
+    margin-top:10px;
+    float:right;
+}
+
+#headerBottomBarLeft {
+    margin-left:10px;
+    margin-top:5px;
+    float:left;
+    width:300px;
+}
+
+#headerBottomBarRight {
+    margin-right:10px;
+    margin-top:10px;
+    float:right;
+}
+
+#detailsTitleEdit {
+    border:1px solid lightgray;
+    min-height:60px;
+    width:590px;
+    font-size:0.8em;
+}
+
+#detailsDescEdit {
+    border:1px solid lightgray;
+    width:600px;
+    min-height:300px;
+}
+
+#detailsPane #statusWidget li, #detailsPane #statusWidget .selectedItem {
+    border-radius:4px;
+    padding:5px;
+    width:80px;
+    margin-bottom:5px;
+    color:white;
+    font-weight:bold;
+    text-align:center;
+}
+
+#detailsPane #statusWidget [id="1"], .openStatusLabel {
+    background:green;
+    color:white;
+}
+
+#detailsPane #statusWidget [id="2"], .completedStatusLabel {
+    background:black;
+    color:white;
+
+}
+#detailsPane #statusWidget [id="3"], .pausedStatusLabel {
+    background:orange;
+    color:white;
+}
+
+#detailsPane #statusWidget [id="4"], .deletedStatusLabel {
+    background:red;
+    color:white;
+}
+
+.statusLabel {
+    width:2px;
+    height:2px;
+    border-radius:4px;
+}
+
+#listContainer {
+    font-size:1.2em;
+}
+
+#actionViewTopBar {
+    margin-top:5px;
+    margin-left:15px;
+    height:40px;
+}
+
+#actionViewLeftTopBar {
+    float:left;
+}
+
+#actionViewRightTopBar {
+    float:right;
+    margin-right:20px;
+}
+
+#actionViewRightTopBar table {
+    border-spacing: 10px 5px;
+}
+
+
+#identityBox {
+    padding:5px;
+    margin-left:5px;
+}
+
+
+
+#mainContentTitle {
+    margin-top: 5px;
+    color: gray;
+    font-size: 1.4em;
+}
+
+#hotList {
+    margin:0;
+    padding:0;
+}
+
+#hotList > ul {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    width:100%;
+}
+
+#hotList > ul > li {
+    display:relative;
+    margin: 5px;
+    padding: 5px;
+    list-style:none;
+}
+
+#hotList > ul > li a {
+    color:gray !important;
+}
+
+#hotList > ul > li {
+    color:black;
+}
+
+#hotList .selected {
+    display:block;
+    background-color: white;
+    color:white;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #F5F5F5;
+}
+
+#hotList > ul > li:hover {
+    background-color:#F5F5F5;
+}
+
+#hotList > ul > li.selected a, #hotList > ul > li a:hover{
+    text-decoration:none;
+}
+
+#topArea #pageTitle  {
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+#topRightNavBar {
+    margin-top:5px;
+    float:right;
+    border-radius:4px;
+}
+
+
+#listDetailsPane {
+    border: 1px solid lightgray;
+    width:100%;
+    margin:0;
+    padding:0;
+    
+}
+
+
+#listDetailsTitleHeader {
+    margin-left:10px;
+    padding: 10px;
+    width:100%;
+    height:60px;
+}
+
+#listDetailsTitle {
+    margin-top:10px;
+    font-size: 2em;
+    float:left;
+    width:600px;
+    height:60px;
+}
+
+#listDetailsTitleEditButton {
+    display:none;
+    float:right;
+    position:relative;
+    top:10px;
+    right:30px;
+}
+
+#listDetailsTitleHeader {
+    margin-left:10px;
+    padding: 10px;
+    width:100%;
+    height:60px;
+}
+
+#listDetailsDescHeader {
+    width:100%;
+    min-height:120px;
+    border-bottom:1px solid lightgray;
+}
+
+#listDetailsDesc {
+    float:left;
+    width:550px;
+    padding:10px;
+    font-size:1em;
+}
+
+#listDetailsDescEditButton {
+    display:none;
+    float:right;
+    position:relative;
+    top:10px;
+    right:10px;
+
+}
+
+#listDetailsSettings {
+    margin:10px;
+}
+
+#listDetailsSettings tr {
+    height: 40px;
+}
+
+#listDetailsSettings td {
+    width: 300px;
+}
+
+#listDetailsTag {
+    clear:both;
+    float:left;
+    font-size: 0.9em;
+    width:100px;
+    height:40px;
+    padding-top:10px;
+    font-style:italic;
+}
+
+#listDetailsTagEdit {
+    width:200px !important;
+}
+
+
+#listDetailsTagEditButton {
+    display:none;
+    float:right;
+    position:relative;
+    top:5px;
+}
+
+#listDetailsPane select, #listDetailsPane input {
+    width: 550px;
+}
+
+#listDetailsTitleEdit {
+    border:1px solid lightgray;
+    height:50px;
+    font-size:1em;
+}
+
+#listDetailsDescEdit {
+    border:1px solid lightgray;
+    width:550px;
+    height:100px;
+}
+
+
+#listDetailsPane .buttonGroup {
+    clear:both;
+    float:right;
+    height:30px;
+    padding:10px;
+}
+
+#mainContentTitleHeader {
+    position:absolute;
+    top: -75px;
+    
+    width:100%;
+    height:60px;
+}
+
+.actionsView {
+    position:relative;
+}
+
+#mainContentTitleEditButton {
+    display:none;
+    float:right;
+    position:relative;
+    top:15px;
+    right:15px;
+
+}
+
+#whenDate, #whenTime {
+    width:80px;
+    margin:0;
+    padding:0;
+    margin-right:10px;
+}
+
+#clearWhenButton, #clearDeadlineButton {
+    margin-left: 5px;
+    padding:1px;
+}
+
+#deadlineDate, #deadlineTime {
+    width:80px;
+    margin:0;
+    padding:0;
+    margin-right:10px;
+}
+
+#clearDeadlineButton {
+    padding:1px;
+}
+
+
+#statusContainer {
+    padding: 2px;
+}
+
+#listTitle {
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-top:20px;
+    margin-left:20px;
+    color: gray;
+}
+
+.friendListView {
+    margin-top:50px;
+}
+
+#friendButtonBar {
+    float:right;
+    margin-top:-40px;
+}
+
+#pageMessageBoxWrapper {
+    position:relative;
+    width: 100%;
+    height: 100%;
+}
+
+#pageMessageBox {
+    position:absolute;
+    top:150px;
+    left:250px;
+    background: #EEEEEE;
+    margin: auto auto;
+    padding: 10px;
+    height: 40px;
+    border-radius: 4px;
+
+}
+#pageMessageBox p {
+    font-size: 14px;
+}
+
+#editUserProfileButton {
+    float:right;
+}
+
+.userSummaryView #addAsFriendButton {
+    float:right;
+}
+
+
+#saveProfileButton {
+    float:right;
+    margin-right:20px;
+}
+
+#projectSettings {
+    margin-left: 10px;
+}
+
+#joinProjectButton {
+    float:right;
+}
+
+.newsFeedView {
+    margin: 10px;
+}
+
+#editProjectButton {
+    float:right;
+    margin-right: 10px;
+}
+
+.projectDetails input {
+    width: 500px;
+}
+
+#markdownText {
+    display:none;
+    font-size: 0.8em;
+    position:absolute;
+    width:100px;
+    right: 5px;
+    text-align:right;
+    top: 50px;
+}
+
+.actionDetailsView #nowButton {
+    cursor:pointer;
+    padding: 5px;
+    font-size: 1em;
+}
+
+#placesContainer {
+    margin-top: 20px;
+    margin-left: 10px;
+    background: #E9F1F4;
+    border-radius: 4px;
+    padding: 20px;
+    width:690px;
+}
+
+#assocPlacesTitle {
+    font-size: 1.2em;
+}
+
+.placeDetailsView input {
+   width: 150px;
+}
+
+.placeDetailsView .label {
+    width: 30px !important;
+}
+
+#mapCanvas {
+    padding: 3px;
+    margin:0;
+    width:750px;
+    height:450px;
+}
+
+.contextsView #contextTypeWidget {
+    margin-top:8px;
+    margin-right:20px;
+    float:right;
+    background:#eeeeee;
+    font-size: 0.9em;
+    border-radius:4px;
+    padding:5px;
+}
+
+.contextQuickAddWidget, .contextQuickAddWidget input {
+    width: 600px;
+}
+
+#userProfileView .buttonGroup {
+    float:right;
+    height:30px;
+    padding:10px;
+}
+
+#userProfileView h4 {
+    margin-left:30px;
+}
+
+#contextContainer {
+    width:70px;
+    float:right;
+    margin:5px;
+    margin-top: 6px;
+    padding:2px;
+    border-radius:4px;
+    border: 1px solid orange;
+    background-color: #E9F1F4;
+    color:gray;
+    text-align:center;
+    font-size:0.8em;
+}
+
+.noContext {
+    border: none !important;
+    background: lightgray!important;
+
+}
+
+.noContext .selectedItem {
+    color: gray!important;
+}
+
+#pointsBox {
+    display:none;
+    font-size:2.5em;
+    color:gray;
+    height:100px;
+}
+
+#scoreContainer {
+    position:relative;
+    border-radius: 4px;
+    background: lightgray;
+    border: 1px solid lightgray;
+    width: 80px;
+    padding:2px;
+    box-shadow: 1px 1px 2px lightgray;
+}
+
+#scoreContainer p {
+    text-align:center;
+    font-size: 0.6em;
+    font-weight:bold;
+    text-transform:uppercase;
+    top:-5px;
+    color: gray;
+    padding:0;
+    margin:0;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+#scoreBox {
+    padding: 3px;
+    text-align:center;
+    font-size: 1.0em;
+    font-weight: bold;
+    color: gray;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+#scoreBox.animatingDown {
+    color:#B40808;
+}
+
+#scoreBox.animatingUp {
+    color:green;
+}
+
+
+#identityBox img {
+    padding:2px;
+    margin-left:10px;
+}
+
+.actionItem .mainArea {
+    margin-left:20px;
+}
+
+#locBox {
+    background:#eeeeee;
+    border-radius:4px;
+    padding: 2px;
+    padding-left:4px;
+    padding-right:4px;
+    text-align:center;
+    font-size: 0.7em;
+    font-weight: bold;
+    color: gray;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+#contextButtonBar {
+    float:right;
+    margin-right:10px;
+    margin-top:-30px;
+}
+
+#contextButtonBar .basicButton {
+    margin-right: 10px;
+}
+
+.contextsView {
+    margin-top:50px;
+}
+
+.emptyListText {
+    margin-left: 10px;
+    margin-top: 30px;
+    color: gray;
+}
+
+.projectQuickAddWidget input, .placeQuickAddWidget input, .listQuickAddWidget input, .userSearchWidget input{
+    width: 730px;
+    margin-bottom: 10px;
+}
